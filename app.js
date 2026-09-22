@@ -8,6 +8,8 @@ document.getElementById('loadButton').addEventListener('click', async () => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         
+        // Teste
+        
         const data = await response.json();
         
         container.innerHTML = '';
@@ -20,7 +22,8 @@ document.getElementById('loadButton').addEventListener('click', async () => {
                 <p>Temperature: ${item.temperatureC}°C / ${item.temperatureF}°F</p>
                 <p>Summary: ${item.summary}</p>
             `;
-            
+        
+
             container.appendChild(card);
         });
     } catch (error) {
